@@ -14,10 +14,6 @@ describe('useScriptTag', () => {
   })
 
   it('should add script tag', async() => {
-    const appendChildListener = jest.spyOn(document.head, 'appendChild')
-
-    expect(appendChildListener).not.toBeCalled()
-
     expect(scriptTagElement()).toBeNull()
 
     useSetup(() => {
@@ -28,8 +24,6 @@ describe('useScriptTag', () => {
       }
     })
 
-    expect(appendChildListener).toBeCalled()
-
     expect(scriptTagElement()).toBeInstanceOf(HTMLScriptElement)
   })
 
@@ -37,10 +31,6 @@ describe('useScriptTag', () => {
    * @jest-environment jsdom
    */
   it('should remove script tag on unmount', async() => {
-    const removeChildListener = jest.spyOn(document.head, 'removeChild')
-
-    expect(removeChildListener).not.toBeCalled()
-
     expect(scriptTagElement()).toBeNull()
 
     const vm = useSetup(() => {
@@ -61,16 +51,10 @@ describe('useScriptTag', () => {
 
     expect(scriptTagElement()).toBeNull()
 
-    expect(removeChildListener).toBeCalled()
-
     expect(vm.scriptTag).toBeNull()
   })
 
   it('should remove script tag on unload call', async() => {
-    const removeChildListener = jest.spyOn(document.head, 'removeChild')
-
-    expect(removeChildListener).not.toBeCalled()
-
     expect(scriptTagElement()).toBeNull()
 
     const vm = useSetup(() => {
@@ -94,8 +78,6 @@ describe('useScriptTag', () => {
     await vm.unload()
 
     expect(scriptTagElement()).toBeNull()
-
-    expect(removeChildListener).toBeCalled()
 
     expect(vm.scriptTag).toBeNull()
   })

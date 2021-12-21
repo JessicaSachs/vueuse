@@ -51,6 +51,7 @@ importers:
       rollup-plugin-esbuild: ^4.7.2
       simple-git: ^2.48.0
       simple-git-hooks: ^2.7.0
+      tinyspy: 0.2.4
       typescript: 4.5.4
       unplugin-icons: ^0.12.23
       unplugin-vue-components: ^0.17.9
@@ -102,6 +103,7 @@ importers:
       rollup-plugin-esbuild: 4.7.2_rollup@2.61.1
       simple-git: 2.48.0
       simple-git-hooks: 2.7.0
+      tinyspy: 0.2.4
       typescript: 4.5.4
       unplugin-icons: 0.12.23_1b1d4cced44eea9389ed2a1aad380615
       unplugin-vue-components: 0.17.9_7487b2ab38222916261871ed2020c448
@@ -6866,6 +6868,11 @@ packages:
 
   /tinyspy/0.1.2:
     resolution: {integrity: sha512-ReLcUvHQeyg6FCXWoaajS2FdikgKWSuwrbrKdq4lr0lBAHK57JqBPEF0RZVqxVC+ap5+ktQemTBJJc9XDO+fgg==}
+    engines: {node: '>=14.0.0'}
+    dev: true
+
+  /tinyspy/0.2.4:
+    resolution: {integrity: sha512-A6C0zYMhY2cECXJwJfgesG1jbEjz/d9Enuzx5cC1qiSrGp6eZDMtO8Dxl0Nrn47wR9abEtGr2ckQi52OoJ7eiQ==}
     engines: {node: '>=14.0.0'}
     dev: true
 

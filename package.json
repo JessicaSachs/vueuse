@@ -80,6 +80,7 @@
     "rollup-plugin-esbuild": "^4.7.2",
     "simple-git": "^2.48.0",
     "simple-git-hooks": "^2.7.0",
+    "tinyspy": "0.2.4",
     "typescript": "4.5.4",
     "unplugin-icons": "^0.12.23",
     "unplugin-vue-components": "^0.17.9",
